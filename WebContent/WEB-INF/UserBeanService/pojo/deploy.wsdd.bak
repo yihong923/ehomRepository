@@ -1,0 +1,46 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from UserBeanService WSDL service -->
+
+  <service name="UserBean" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://pojo"/>
+      <parameter name="wsdlServiceElement" value="UserBeanService"/>
+      <parameter name="schemaQualified" value="http://pojo"/>
+      <parameter name="wsdlServicePort" value="UserBean"/>
+      <parameter name="className" value="pojo.UserBeanSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="UserBean"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="setPassword" qname="operNS:setPassword" xmlns:operNS="http://pojo" soapAction="" >
+        <parameter qname="pns:password" xmlns:pns="http://pojo" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setUserName" qname="operNS:setUserName" xmlns:operNS="http://pojo" soapAction="" >
+        <parameter qname="pns:userName" xmlns:pns="http://pojo" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getDepartId" qname="operNS:getDepartId" xmlns:operNS="http://pojo" returnQName="retNS:getDepartIdReturn" xmlns:retNS="http://pojo" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setDepartId" qname="operNS:setDepartId" xmlns:operNS="http://pojo" soapAction="" >
+        <parameter qname="pns:departId" xmlns:pns="http://pojo" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getJobTitleId" qname="operNS:getJobTitleId" xmlns:operNS="http://pojo" returnQName="retNS:getJobTitleIdReturn" xmlns:retNS="http://pojo" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setJobTitleId" qname="operNS:setJobTitleId" xmlns:operNS="http://pojo" soapAction="" >
+        <parameter qname="pns:jobTitleId" xmlns:pns="http://pojo" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getPassword" qname="operNS:getPassword" xmlns:operNS="http://pojo" returnQName="retNS:getPasswordReturn" xmlns:retNS="http://pojo" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getUserName" qname="operNS:getUserName" xmlns:operNS="http://pojo" returnQName="retNS:getUserNameReturn" xmlns:retNS="http://pojo" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="getDepartId setDepartId setJobTitleId setUserName getPassword getJobTitleId setPassword getUserName"/>
+
+  </service>
+</deployment>

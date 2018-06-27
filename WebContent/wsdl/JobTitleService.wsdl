@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://service" xmlns:intf="http://service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://service" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="synchJobtile">
+    <complexType>
+     <sequence>
+      <element name="action" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="synchJobtileResponse">
+    <complexType>
+     <sequence>
+      <element name="synchJobtileReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="synchJobtileResponse">
+
+      <wsdl:part element="impl:synchJobtileResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="synchJobtileRequest">
+
+      <wsdl:part element="impl:synchJobtile" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="JobTitleService">
+
+      <wsdl:operation name="synchJobtile">
+
+         <wsdl:input message="impl:synchJobtileRequest" name="synchJobtileRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:synchJobtileResponse" name="synchJobtileResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="JobTitleServiceSoapBinding" type="impl:JobTitleService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="synchJobtile">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="synchJobtileRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="synchJobtileResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="JobTitleServiceService">
+
+      <wsdl:port binding="impl:JobTitleServiceSoapBinding" name="JobTitleService">
+
+         <wsdlsoap:address location="http://localhost:8080/helloService/services/JobTitleService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

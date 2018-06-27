@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://pojo" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://pojo" xmlns:intf="http://pojo" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://pojo" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="setPassword">
+    <complexType>
+     <sequence>
+      <element name="password" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setPasswordResponse">
+    <complexType/>
+   </element>
+   <element name="setUserName">
+    <complexType>
+     <sequence>
+      <element name="userName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setUserNameResponse">
+    <complexType/>
+   </element>
+   <element name="getDepartId">
+    <complexType/>
+   </element>
+   <element name="getDepartIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getDepartIdReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setDepartId">
+    <complexType>
+     <sequence>
+      <element name="departId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setDepartIdResponse">
+    <complexType/>
+   </element>
+   <element name="getJobTitleId">
+    <complexType/>
+   </element>
+   <element name="getJobTitleIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getJobTitleIdReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setJobTitleId">
+    <complexType>
+     <sequence>
+      <element name="jobTitleId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setJobTitleIdResponse">
+    <complexType/>
+   </element>
+   <element name="getPassword">
+    <complexType/>
+   </element>
+   <element name="getPasswordResponse">
+    <complexType>
+     <sequence>
+      <element name="getPasswordReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUserName">
+    <complexType/>
+   </element>
+   <element name="getUserNameResponse">
+    <complexType>
+     <sequence>
+      <element name="getUserNameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getUserNameRequest">
+
+      <wsdl:part element="impl:getUserName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setUserNameResponse">
+
+      <wsdl:part element="impl:setUserNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getJobTitleIdRequest">
+
+      <wsdl:part element="impl:getJobTitleId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setDepartIdRequest">
+
+      <wsdl:part element="impl:setDepartId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setUserNameRequest">
+
+      <wsdl:part element="impl:setUserName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDepartIdRequest">
+
+      <wsdl:part element="impl:getDepartId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDepartIdResponse">
+
+      <wsdl:part element="impl:getDepartIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setDepartIdResponse">
+
+      <wsdl:part element="impl:setDepartIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserNameResponse">
+
+      <wsdl:part element="impl:getUserNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setPasswordResponse">
+
+      <wsdl:part element="impl:setPasswordResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getJobTitleIdResponse">
+
+      <wsdl:part element="impl:getJobTitleIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPasswordRequest">
+
+      <wsdl:part element="impl:getPassword" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setPasswordRequest">
+
+      <wsdl:part element="impl:setPassword" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPasswordResponse">
+
+      <wsdl:part element="impl:getPasswordResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setJobTitleIdRequest">
+
+      <wsdl:part element="impl:setJobTitleId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setJobTitleIdResponse">
+
+      <wsdl:part element="impl:setJobTitleIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="UserBean">
+
+      <wsdl:operation name="setPassword">
+
+         <wsdl:input message="impl:setPasswordRequest" name="setPasswordRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setPasswordResponse" name="setPasswordResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setUserName">
+
+         <wsdl:input message="impl:setUserNameRequest" name="setUserNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setUserNameResponse" name="setUserNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDepartId">
+
+         <wsdl:input message="impl:getDepartIdRequest" name="getDepartIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getDepartIdResponse" name="getDepartIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setDepartId">
+
+         <wsdl:input message="impl:setDepartIdRequest" name="setDepartIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setDepartIdResponse" name="setDepartIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getJobTitleId">
+
+         <wsdl:input message="impl:getJobTitleIdRequest" name="getJobTitleIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getJobTitleIdResponse" name="getJobTitleIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setJobTitleId">
+
+         <wsdl:input message="impl:setJobTitleIdRequest" name="setJobTitleIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setJobTitleIdResponse" name="setJobTitleIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPassword">
+
+         <wsdl:input message="impl:getPasswordRequest" name="getPasswordRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getPasswordResponse" name="getPasswordResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUserName">
+
+         <wsdl:input message="impl:getUserNameRequest" name="getUserNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getUserNameResponse" name="getUserNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="UserBeanSoapBinding" type="impl:UserBean">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="setPassword">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setPasswordRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setPasswordResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setUserName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setUserNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setUserNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDepartId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDepartIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDepartIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setDepartId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setDepartIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setDepartIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getJobTitleId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getJobTitleIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getJobTitleIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setJobTitleId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setJobTitleIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setJobTitleIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPassword">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPasswordRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPasswordResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUserName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUserNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUserNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="UserBeanService">
+
+      <wsdl:port binding="impl:UserBeanSoapBinding" name="UserBean">
+
+         <wsdlsoap:address location="http://localhost:8080/helloService/services/UserBean"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

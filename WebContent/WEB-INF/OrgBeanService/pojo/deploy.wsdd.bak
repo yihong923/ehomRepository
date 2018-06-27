@@ -1,0 +1,41 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from OrgBeanService WSDL service -->
+
+  <service name="OrgBean" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://pojo"/>
+      <parameter name="wsdlServiceElement" value="OrgBeanService"/>
+      <parameter name="schemaQualified" value="http://pojo"/>
+      <parameter name="wsdlServicePort" value="OrgBean"/>
+      <parameter name="className" value="pojo.OrgBeanSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="OrgBean"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getOrgName" qname="operNS:getOrgName" xmlns:operNS="http://pojo" returnQName="retNS:getOrgNameReturn" xmlns:retNS="http://pojo" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setOrgName" qname="operNS:setOrgName" xmlns:operNS="http://pojo" soapAction="" >
+        <parameter qname="pns:orgName" xmlns:pns="http://pojo" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getDepartId" qname="operNS:getDepartId" xmlns:operNS="http://pojo" returnQName="retNS:getDepartIdReturn" xmlns:retNS="http://pojo" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setDepartId" qname="operNS:setDepartId" xmlns:operNS="http://pojo" soapAction="" >
+        <parameter qname="pns:departId" xmlns:pns="http://pojo" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getSubCompany" qname="operNS:getSubCompany" xmlns:operNS="http://pojo" returnQName="retNS:getSubCompanyReturn" xmlns:retNS="http://pojo" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setSubCompany" qname="operNS:setSubCompany" xmlns:operNS="http://pojo" soapAction="" >
+        <parameter qname="pns:subCompany" xmlns:pns="http://pojo" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="getDepartId setDepartId setSubCompany getOrgName setOrgName getSubCompany"/>
+
+  </service>
+</deployment>

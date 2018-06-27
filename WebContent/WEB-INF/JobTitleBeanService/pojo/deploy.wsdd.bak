@@ -1,0 +1,36 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from JobTitleBeanService WSDL service -->
+
+  <service name="JobTitleBean" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://pojo"/>
+      <parameter name="wsdlServiceElement" value="JobTitleBeanService"/>
+      <parameter name="schemaQualified" value="http://pojo"/>
+      <parameter name="wsdlServicePort" value="JobTitleBean"/>
+      <parameter name="className" value="pojo.JobTitleBeanSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="JobTitleBean"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getJobTitleName" qname="operNS:getJobTitleName" xmlns:operNS="http://pojo" returnQName="retNS:getJobTitleNameReturn" xmlns:retNS="http://pojo" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setJobTitleName" qname="operNS:setJobTitleName" xmlns:operNS="http://pojo" soapAction="" >
+        <parameter qname="pns:jobTitleName" xmlns:pns="http://pojo" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getJobTileId" qname="operNS:getJobTileId" xmlns:operNS="http://pojo" returnQName="retNS:getJobTileIdReturn" xmlns:retNS="http://pojo" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setJobTileId" qname="operNS:setJobTileId" xmlns:operNS="http://pojo" soapAction="" >
+        <parameter qname="pns:jobTileId" xmlns:pns="http://pojo" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="setJobTileId setJobTitleName getJobTileId getJobTitleName"/>
+
+  </service>
+</deployment>

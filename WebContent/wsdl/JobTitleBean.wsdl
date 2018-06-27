@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://pojo" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://pojo" xmlns:intf="http://pojo" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://pojo" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getJobTitleName">
+    <complexType/>
+   </element>
+   <element name="getJobTitleNameResponse">
+    <complexType>
+     <sequence>
+      <element name="getJobTitleNameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setJobTitleName">
+    <complexType>
+     <sequence>
+      <element name="jobTitleName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setJobTitleNameResponse">
+    <complexType/>
+   </element>
+   <element name="getJobTileId">
+    <complexType/>
+   </element>
+   <element name="getJobTileIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getJobTileIdReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setJobTileId">
+    <complexType>
+     <sequence>
+      <element name="jobTileId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setJobTileIdResponse">
+    <complexType/>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getJobTitleNameRequest">
+
+      <wsdl:part element="impl:getJobTitleName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getJobTileIdResponse">
+
+      <wsdl:part element="impl:getJobTileIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setJobTileIdRequest">
+
+      <wsdl:part element="impl:setJobTileId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getJobTileIdRequest">
+
+      <wsdl:part element="impl:getJobTileId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setJobTitleNameRequest">
+
+      <wsdl:part element="impl:setJobTitleName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setJobTileIdResponse">
+
+      <wsdl:part element="impl:setJobTileIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setJobTitleNameResponse">
+
+      <wsdl:part element="impl:setJobTitleNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getJobTitleNameResponse">
+
+      <wsdl:part element="impl:getJobTitleNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="JobTitleBean">
+
+      <wsdl:operation name="getJobTitleName">
+
+         <wsdl:input message="impl:getJobTitleNameRequest" name="getJobTitleNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getJobTitleNameResponse" name="getJobTitleNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setJobTitleName">
+
+         <wsdl:input message="impl:setJobTitleNameRequest" name="setJobTitleNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setJobTitleNameResponse" name="setJobTitleNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getJobTileId">
+
+         <wsdl:input message="impl:getJobTileIdRequest" name="getJobTileIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getJobTileIdResponse" name="getJobTileIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setJobTileId">
+
+         <wsdl:input message="impl:setJobTileIdRequest" name="setJobTileIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setJobTileIdResponse" name="setJobTileIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="JobTitleBeanSoapBinding" type="impl:JobTitleBean">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getJobTitleName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getJobTitleNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getJobTitleNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setJobTitleName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setJobTitleNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setJobTitleNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getJobTileId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getJobTileIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getJobTileIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setJobTileId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setJobTileIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setJobTileIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="JobTitleBeanService">
+
+      <wsdl:port binding="impl:JobTitleBeanSoapBinding" name="JobTitleBean">
+
+         <wsdlsoap:address location="http://localhost:8080/helloService/services/JobTitleBean"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

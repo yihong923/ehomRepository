@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://pojo" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://pojo" xmlns:intf="http://pojo" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://pojo" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getOrgName">
+    <complexType/>
+   </element>
+   <element name="getOrgNameResponse">
+    <complexType>
+     <sequence>
+      <element name="getOrgNameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setOrgName">
+    <complexType>
+     <sequence>
+      <element name="orgName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setOrgNameResponse">
+    <complexType/>
+   </element>
+   <element name="getDepartId">
+    <complexType/>
+   </element>
+   <element name="getDepartIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getDepartIdReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setDepartId">
+    <complexType>
+     <sequence>
+      <element name="departId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setDepartIdResponse">
+    <complexType/>
+   </element>
+   <element name="getSubCompany">
+    <complexType/>
+   </element>
+   <element name="getSubCompanyResponse">
+    <complexType>
+     <sequence>
+      <element name="getSubCompanyReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setSubCompany">
+    <complexType>
+     <sequence>
+      <element name="subCompany" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setSubCompanyResponse">
+    <complexType/>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="setOrgNameRequest">
+
+      <wsdl:part element="impl:setOrgName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSubCompanyRequest">
+
+      <wsdl:part element="impl:getSubCompany" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getOrgNameRequest">
+
+      <wsdl:part element="impl:getOrgName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSubCompanyResponse">
+
+      <wsdl:part element="impl:getSubCompanyResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setDepartIdRequest">
+
+      <wsdl:part element="impl:setDepartId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setSubCompanyRequest">
+
+      <wsdl:part element="impl:setSubCompany" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDepartIdResponse">
+
+      <wsdl:part element="impl:getDepartIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDepartIdRequest">
+
+      <wsdl:part element="impl:getDepartId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setOrgNameResponse">
+
+      <wsdl:part element="impl:setOrgNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getOrgNameResponse">
+
+      <wsdl:part element="impl:getOrgNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setDepartIdResponse">
+
+      <wsdl:part element="impl:setDepartIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setSubCompanyResponse">
+
+      <wsdl:part element="impl:setSubCompanyResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="OrgBean">
+
+      <wsdl:operation name="getOrgName">
+
+         <wsdl:input message="impl:getOrgNameRequest" name="getOrgNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getOrgNameResponse" name="getOrgNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setOrgName">
+
+         <wsdl:input message="impl:setOrgNameRequest" name="setOrgNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setOrgNameResponse" name="setOrgNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDepartId">
+
+         <wsdl:input message="impl:getDepartIdRequest" name="getDepartIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getDepartIdResponse" name="getDepartIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setDepartId">
+
+         <wsdl:input message="impl:setDepartIdRequest" name="setDepartIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setDepartIdResponse" name="setDepartIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSubCompany">
+
+         <wsdl:input message="impl:getSubCompanyRequest" name="getSubCompanyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getSubCompanyResponse" name="getSubCompanyResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setSubCompany">
+
+         <wsdl:input message="impl:setSubCompanyRequest" name="setSubCompanyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setSubCompanyResponse" name="setSubCompanyResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="OrgBeanSoapBinding" type="impl:OrgBean">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getOrgName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getOrgNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getOrgNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setOrgName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setOrgNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setOrgNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDepartId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDepartIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDepartIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setDepartId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setDepartIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setDepartIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSubCompany">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSubCompanyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSubCompanyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setSubCompany">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setSubCompanyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setSubCompanyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="OrgBeanService">
+
+      <wsdl:port binding="impl:OrgBeanSoapBinding" name="OrgBean">
+
+         <wsdlsoap:address location="http://localhost:8080/helloService/services/OrgBean"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
